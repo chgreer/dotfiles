@@ -5,6 +5,7 @@ export EDITOR="vim";
 export HISTSIZE=32768;
 export HISTFILESIZE=$HISTSIZE;
 export HISTCONTROL=ignoredups;
+
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
 
@@ -18,8 +19,33 @@ export LESS_TERMCAP_md="${yellow}";
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X";
 
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="$ORANGE"
+
 # Always enable colored `grep` output
 export GREP_OPTIONS="--color=auto";
 
-# Link Homebrew casks in `/Applications` rather than `~/Applications`
-export HOMEBREW_CASK_OPTS="--appdir=/Applications";
+export CVS_RSH=ssh
+export CVSROOT=:ext:sza:/home/cvsroot
+
+if [[ $platform == 'osx' ]]; then
+    #echo "on gaspar, adding special directories"
+    export PGPLOT_INC_DIR=/opt/local/include
+
+    export CLIMAX_SRC=${HOME}/src/climax/climaxSrc
+    export CLIMAX_TOOLS=${HOME}/src/climax/climaxTools
+
+    export PYTHONPATH=$PYTHONPATH:$SZA_ANALYSIS/miriad_scripts
+    export PYTHONPATH=$PYTHONPATH:${CLIMAX_SRC}/python:${CLIMAX_SRC}
+    export PYTHONPATH=$PYTHONPATH:${HOME}/src/climax
+
+    export LD_LIBRARY_PATH=${CLIMAX_TOOLS}/lib
+    export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/opt/bin/local/lib/libgcc
+
+    export DYLD_LIBRARY_PATH=${CLIMAX_TOOLS}/lib
+    export DYLD_LIBRARY_PATH=${DYLD_LIBRARY_PATH}:/opt/bin/local/lib/libgcc
+else
+    #on linux
+    export PYTHONPATH=$PYTHONPATH:/home/tplagge/sza_analysis/miriad_scripts
+    export PYTHONPATH=$PYTHONPATH:/home/tplagge/lib/python2.7
+fi

@@ -1,5 +1,19 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
+export SZA_ANALYSIS="$HOME/sza_analysis"
+
+
+#figure out what sort of system we're on
+export HOSTNAME=$(hostname)
+platform='unknown'
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+   export PLATFORM='linux'
+elif [[ "$unamestr" == 'FreeBSD' ]]; then
+   export PLATFORM='freebsd'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+   expor PLATFORM='osx'
+fi
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
