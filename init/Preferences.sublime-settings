@@ -13,15 +13,19 @@
 		"._*",
 		"Thumbs.db",
 		".Spotlight-V100",
-		".Trashes"
+		".Trashes",
+		"*.pid"
 	],
 	"folder_exclude_patterns":
 	[
 		".git",
-		"node_modules"
+		"node_modules",
+		"__pycache__",
+		"env",
+		"env3"
 	],
-	"font_face": "Monaco",
-	"font_size": 13,
+	"font_face": "Consolas",
+	"font_size": 16,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"line_padding_bottom": 5,
@@ -30,12 +34,21 @@
 	"remember_open_files": false,
 	"rulers":
 	[
-		80
+		78
 	],
 	"show_encoding": true,
 	"show_line_endings": true,
-	"tab_size": 2,
-	"translate_tabs_to_spaces": false,
+	"tab_size": 4,
+	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": true
+	"open_files_in_new_window": false,
+	"word_wrap": true,
+	"ignored_packages":
+  [
+		"Vintage",
+    "Sublime Linter"
+  ],
+  "highlight_line": true,
+  "show_full_path": true,
+
 }
