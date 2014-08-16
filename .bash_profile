@@ -12,7 +12,7 @@ if [[ "$unamestr" == 'Linux' ]]; then
 elif [[ "$unamestr" == 'FreeBSD' ]]; then
    export PLATFORM='freebsd'
 elif [[ "$unamestr" == 'Darwin' ]]; then
-   expor PLATFORM='osx'
+   export PLATFORM='osx'
 fi
 
 # Load the shell dotfiles, and then some:
