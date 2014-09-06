@@ -1,7 +1,7 @@
 "" Make Vim more useful
 set nocompatible
 syntax on
-colorscheme lucius
+"colorscheme lucius
 set background=dark
 set gfn=Monaco:h14
 

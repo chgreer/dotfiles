@@ -28,7 +28,7 @@ export GREP_OPTIONS="--color=auto";
 export CVS_RSH=ssh
 export CVSROOT=:ext:sza:/home/cvsroot
 
-if [[ $platform == 'osx' ]]; then
+if [[ $PLATFORM == 'osx' ]]; then
     #echo "on gaspar, adding special directories"
     export PGPLOT_INC_DIR=/opt/local/include
 
