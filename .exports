@@ -50,4 +50,6 @@ else
     export PYTHONPATH=$PYTHONPATH:/home/tplagge/lib/python2.7
     export CLIMAX_SRC=/home/eml/projects/climax/climaxSrc
     export CLIMAX_TOOLS=/home/eml/projects/climax/climaxTools
+
+    export CACTUSHOME=/home/cactus
 fi
