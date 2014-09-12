@@ -22,7 +22,7 @@ alias uvp='smauvplt device=/xs'
 
 alias climax="${CLIMAX_SRC}/bin/climaxRunManager logo=f"
 
-if [[ $platform == 'osx' ]]; then
+if [[ $PLATFORM == 'osx' ]]; then
   alias matlab="/Applications/MATLAB_R2012a.app/bin/matlab -nodesktop -nosplash"
   alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 fi

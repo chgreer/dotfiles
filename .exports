@@ -30,7 +30,9 @@ export CVSROOT=:ext:sza:/home/cvsroot
 
 if [[ $PLATFORM == 'osx' ]]; then
     #echo "on gaspar, adding special directories"
+    export PGPLOT_FONT=/opt/local/pgplot
     export PGPLOT_INC_DIR=/opt/local/include
+    export PGPLOT_DIR=/opt/local/pgplot
 
     export CLIMAX_SRC=${HOME}/src/climax/climaxSrc
     export CLIMAX_TOOLS=${HOME}/src/climax/climaxTools

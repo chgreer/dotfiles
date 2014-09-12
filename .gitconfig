@@ -145,3 +145,6 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+[user]
+	email = chgreer@gmail.com
+	name = Chris Greer
