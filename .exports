@@ -34,6 +34,9 @@ if [[ $PLATFORM == 'osx' ]]; then
     export PGPLOT_INC_DIR=/opt/local/include
     export PGPLOT_DIR=/opt/local/pgplot
 
+    export CACTUS=${HOME}/arosoft/cactus
+    export MAILBOXDEFS=${CACTUS}/mailboxdefs
+    
     export CLIMAX_SRC=${HOME}/src/climax/climaxSrc
     export CLIMAX_TOOLS=${HOME}/src/climax/climaxTools
 
@@ -41,17 +44,17 @@ if [[ $PLATFORM == 'osx' ]]; then
     export PYTHONPATH=$PYTHONPATH:${CLIMAX_SRC}/python:${CLIMAX_SRC}
     export PYTHONPATH=$PYTHONPATH:${HOME}/src/climax
 
-    export LD_LIBRARY_PATH=${CLIMAX_TOOLS}/lib
+    export LD_LIBRARY_PATH=${CLIMAX_TOOLS}/lib:${CACTUS}/lib
     export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/opt/bin/local/lib/libgcc
 
-    export DYLD_LIBRARY_PATH=${CLIMAX_TOOLS}/lib
+    export DYLD_LIBRARY_PATH=${CLIMAX_TOOLS}/lib:${CACTUS}/lib
     export DYLD_LIBRARY_PATH=${DYLD_LIBRARY_PATH}:/opt/bin/local/lib/libgcc
+
 else
     #on linux
     export PYTHONPATH=$PYTHONPATH:/home/tplagge/sza_analysis/miriad_scripts
     export PYTHONPATH=$PYTHONPATH:/home/tplagge/lib/python2.7
     export CLIMAX_SRC=/home/eml/projects/climax/climaxSrc
     export CLIMAX_TOOLS=/home/eml/projects/climax/climaxTools
-
     export CACTUSHOME=/home/cactus
 fi

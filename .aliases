@@ -23,15 +23,11 @@ alias uvp='smauvplt device=/xs'
 alias climax="${CLIMAX_SRC}/bin/climaxRunManager logo=f"
 
 if [[ $PLATFORM == 'osx' ]]; then
-  alias matlab="/Applications/MATLAB_R2012a.app/bin/matlab -nodesktop -nosplash"
+  alias matlab="/Applications/MATLAB_R2014a.app/bin/matlab -nodesktop -nosplash"
   alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 fi
 
-alias mmm='cd $SZA_ANALYSIS; matlab -singleCompThread'
-
 alias calc='$HOME/bin/calc "$@"'
-
-
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
