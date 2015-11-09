@@ -1,6 +1,5 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
-export SZA_ANALYSIS="$HOME/sza_analysis"
 
 
 #figure out what sort of system we're on
@@ -40,11 +39,11 @@ for option in autocd globstar; do
 done;
 
 # Add tab completion for many Bash commands
-#if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
-#	source "$(brew --prefix)/etc/bash_completion";
-#elif [ -f /etc/bash_completion ]; then
-#source /etc/bash_completion;
-#fi;
+if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+	source "$(brew --prefix)/etc/bash_completion";
+elif [ -f /etc/bash_completion ]; then
+source /etc/bash_completion;
+fi;
 
 # Enable tab completion for `g` by marking it as an alias for `git`
 if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
@@ -60,3 +59,5 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
