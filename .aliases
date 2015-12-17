@@ -21,6 +21,8 @@ alias tsp='smavarplt device=/xs yaxis=systemp nxy=1,2'
 alias uvp='smauvplt device=/xs'
 
 alias climax="${CLIMAX_SRC}/bin/climaxRunManager logo=f"
+alias python="/Users/cgreer/anaconda/bin/python"
+
 
 if [[ $PLATFORM == 'osx' ]]; then
   alias matlab="/Applications/MATLAB_R2014a.app/bin/matlab -nodesktop -nosplash"

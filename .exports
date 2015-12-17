@@ -6,6 +6,9 @@ export LC_ALL='C'
 export HOMEBREW_CACHE=/Users/cgreer/Library/Caches/Homebrew
 export HOMEBREW_CASK_OPTS="--caskroom=/usr/local/Cask/Caskroom"
 
+#Java_home
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768;
 export HISTFILESIZE=$HISTSIZE;
@@ -33,7 +36,7 @@ export GREP_OPTIONS="--color=auto";
 export CVS_RSH=ssh
 
 #github api personal access token
-export HOMEBREW_GITHUB_API_TOKEN=920720ff03d645fb3f8fbed23296585ab88d603a
+export HOMEBREW_GITHUB_API_TOKEN=900b0f4fce98caa6ec8d1f6033c5c38132dd3283
 
 if [[ $PLATFORM == 'osx' ]]; then
     #echo "on gaspar, adding special directories"
