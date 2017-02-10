@@ -1,18 +1,17 @@
 # Make vim the default editor
 export EDITOR="vim";
 
-
-export LC_ALL='C'
-export HOMEBREW_CACHE=/Users/cgreer/Library/Caches/Homebrew
-export HOMEBREW_CASK_OPTS="--caskroom=/usr/local/Cask/Caskroom"
-
-#Java_home
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+# Enable persistent REPL history for `node`.
+export NODE_REPL_HISTORY=~/.node_history;
+# Allow 32³ entries; the default is 1000.
+export NODE_REPL_HISTORY_SIZE='32768';
+# Use sloppy mode by default, matching web browsers.
+export NODE_REPL_MODE='sloppy';
 
 # Larger bash history (allow 32³ entries; default is 500)
-export HISTSIZE=32768;
-export HISTFILESIZE=$HISTSIZE;
-export HISTCONTROL=ignoredups;
+export HISTSIZE='32768';
+export HISTFILESIZE="$HISTSIZE";
+export HISTCONTROL='ignoreboth';
 
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
@@ -28,27 +27,11 @@ export LESS_TERMCAP_md="${yellow}";
 export MANPAGER="less -X";
 
 # Highlight section titles in manual pages
-export LESS_TERMCAP_md="$ORANGE"
-
-# Always enable colored `grep` output
-export GREP_OPTIONS="--color=auto";
-
-export CVS_RSH=ssh
-
-#github api personal access token
-export HOMEBREW_GITHUB_API_TOKEN=900b0f4fce98caa6ec8d1f6033c5c38132dd3283
+export LESS_TERMCAP_md="${yellow}"
 
 if [[ $PLATFORM == 'osx' ]]; then
     #echo "on gaspar, adding special directories"
     export SRCDIR=/Users/cgreer/src
-    export CORENLP=${SRCDIR}/kpmg_nlp/kdocument/CoreNLP
-    export PYTHONPATH=$PYTHONPATH:${HOME}/src/kpmg_dcre/src/queue    
-    export CLASSPATH=${CLASSPATH}:${CORENLP}/classes:${CORENLP}/lib
 else
     #on linux
-    export PYTHONPATH=$PYTHONPATH:/home/tplagge/sza_analysis/miriad_scripts
-    export PYTHONPATH=$PYTHONPATH:/home/tplagge/lib/python2.7
-    export CLIMAX_SRC=/home/eml/projects/climax/climaxSrc
-    export CLIMAX_TOOLS=/home/eml/projects/climax/climaxTools
-    export CACTUSHOME=/home/cactus
 fi
