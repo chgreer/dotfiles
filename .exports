@@ -32,6 +32,4 @@ export LESS_TERMCAP_md="${yellow}"
 if [[ $PLATFORM == 'osx' ]]; then
     #echo "on gaspar, adding special directories"
     export SRCDIR=/Users/cgreer/src
-else
-    #on linux
 fi

@@ -1,6 +1,4 @@
 
 if [[ $PLATFORM == 'osx' ]]; then
     export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
-    export PATH="$PATH:/Users/cgreer/anaconda/bin"
-    export PATH="$PATH:$HOME/.rvm/bin"
 fi
